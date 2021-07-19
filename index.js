@@ -28,11 +28,12 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-  
+  -counter1 has an extra return statement, and has everything inside of the function, whereas function 2 has the new variable outside of the function and has to use a closure in order to access the value for count.
   2. Which of the two uses a closure? How can you tell?
-  
+  -counter 2 uses a closure as it does not have a value for count inside of the function and must look outside of itself for the answer.
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+     -counter 1 requires private variables, and counter2 does not, so counter 1 is best for any scenario where you would need multiple counters running at the same time, and counter2 would be best for any single player games.
 */
 
 // counter1 code
@@ -45,6 +46,10 @@ function counterMaker() {
 
 const counter1 = counterMaker();
 
+console.log(counter1());
+console.log(counter1());
+
+
 // counter2 code
 let count = 0;
 
@@ -52,19 +57,10 @@ function counter2() {
   return count++;
 }
 
+console.log(counter2());
+console.log(counter2());
+console.log(counter2()); 
 
-/* ⚾️⚾️⚾️ Task 2: inning() ⚾️⚾️⚾️
-Use the inning function below to do the following:
-  1. Return a random whole number of points between 0 and 2 scored by one team in an inning
-  
-  For example: invoking inning() should return a numerical score value of 0, 1, or 2
-  
-NOTE: This will be a callback function for the tasks below
-*/
-
-function inning(/*Code Here*/){
-    /*Code Here*/
-}
 
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️

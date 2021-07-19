@@ -59,6 +59,7 @@ You will be running your tests in one terminal and debugging in the other. As yo
 Edit the `ReadMe` file with your answers to the questions below.
 
 1. In your own words, define closure (1-2 sentences).
+-Closure is where a child doesnt know the definition to a word. where they heard that word, i dont know. could be on their homework or in a book or from a friend, but thats not important. anyway. they dont know what that word means, so they go to their parent and ask if they know what it means. if the parent knows (which they usually do) they will tell the child what that word means and the child will go back to where they saw that word and replace it with its definition to see if it makes sense. its the same with javascript. and if the parent does not know the definition, there may be one within its closure for the parent to find.
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -80,8 +81,12 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+-in the console log statement within the function. newRoll is defined within the function, but name is not, so it reaches outside of itself to the argument.
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+every time you call `dansRoll`, whether it is the first or 100th time, it will always return the console.log statement with his name in it.  the only difference will ever be the number rolled (the number placed in the string template literal when console logged).
 c. What is the lexical scope of `newRoll`? 
+-it is only accessible inside of the personalDice function. so the newRoll can reach outside of the function to get a value, but can only be called upon from inside of the function.
+
 
 
 ### Task 3 - Stretch Goals
